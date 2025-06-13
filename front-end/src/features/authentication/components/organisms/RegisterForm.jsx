@@ -115,17 +115,17 @@ export default function RegisterForm() {
           error={errors.password?.message}
         />
         <AuthInput
-          {...register("password_confirm", {
+          {...register("confirmPassword", {
             required: "Este campo es obligatorio",
             validate: (value) => 
               value === watch("password") || "Las contraseñas no coinciden",
           })}
-          id="password_confirm"
+          id="confirmPassword"
           type="password"
           label="Confirmar Contraseña"
           placeholder="Repite tu contraseña"
           icon={Lock}
-          error={errors.password_confirm?.message}
+          error={errors.confirmPassword?.message}
         />
       </div>
 
